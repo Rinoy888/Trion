@@ -1,0 +1,51 @@
+  <div class="Dbpage db_rm">
+
+  <div class="rm_widget -w-1 rmw_currentBal">
+
+    <div class="rmcb_refresh" ng-controller="CurrentBalCtrl as vm" ng-class="{'animate':vm.refreshing}" ng-click="vm.refresh()"></div>
+    <div class="rm_widget_cont">
+
+      <div class="rmcb_head">Current Balance</div>
+      <div class="rncb_amount">$ {{vm.walletObject.wallet.amount}}</div>
+    </div>
+  </div>
+
+  <div class="rm_widget -w-3 rmw_logs" ng-controller="InsertCtrl as vm">
+    <div class="rmcb_refresh" id="rmcb_update"  ng-class="{'animate':vm.refreshing}" ng-click="vm.refresh()"></div>
+    <div class="rmw_log_cont">
+      <div class="rmwl_head">
+        <div class="rmwl_head_text"> Insert amount</div>
+        <!--<span class="rmwl_rs_icon fa fa-rupee"></span>-->
+        <input type="number" class="rmwl_amt_ins" ng-model="amount">
+      </div>
+      <div class="rmwl_desc">
+          <div class="rmwl_head_text"> Description</div>
+        <input type="text" class="rmwl_amt_ins rmwl_amt_ins2" ng-model="desc" ng-name="desc">
+      </div>
+    </div>
+  </div>
+
+  <div class="rm_widget -w-2 rmw_graph" ng-controller="GraphCtrl as vm">
+    <div class="rmcb_refresh" ng-class="{'animate':vm.refreshing}" ng-click="vm.refresh()"></div>
+    <div class="rmw_graph_cont">
+      <div class="rmwg_head"></div>
+    </div>
+  </div>
+
+  <div class="rm_widget -w-6 rmw_report" ng-controller="ReportCtrl as vm">
+    <div class="rmcb_refresh" ng-class="{'animate':vm.refreshing}" ng-click="vm.refresh()" ></div>
+    <div class="rmw_report_cont">
+      <div class="rmwr_cont_head"></div>
+      <div class="rmr_logs -w-2 rmwr_cont_logs">
+
+      </div>
+      <div class="rmr_logs -w-2 rmwr_cont_logs2">
+
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+
